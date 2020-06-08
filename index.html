@@ -1,30 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="./css/style.css">
-	<title>Pokemon</title>
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Accedo Pokemon</title>
+	</head>
 
-<body>
-	<div class="container">
-		<div class="row" id="container">
-		</div>
-		<div>
-			<nav aria-label="...">
-				<ul class="pagination" id="pagination">					
-				</ul>
+	<body>
+		<!-- Header -->
+		<header>
+			<!-- Nav -->
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand" href="./">Accedo Pokemon</a>
+
+				<!-- Boton humburguesa para el collapse -->
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav d-flex justify-content-end" id="navBody"></ul>
+				</div>
 			</nav>
-		</div>
-	</div>	
+			<!-- Fin nav -->
+		</header>
+		<!-- Fin header -->
 
-	<!-- Scripts -->
-	<script src="./js/bootstrap/jquery.js"></script>
-	<script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
-	<script src="./js/bootstrap/bootstrap.min.js"></script>
-	<script src="./js/pokemon.js"></script>
-	<script src="./js/main.js"></script>
-</body>
+		<!-- Section de contenido -->
+		<section class="container">
+			<div class="row" id="container"></div>
+		</section>
+		<!-- Fin de la section de contenido -->
+
+		<!-- Footer -->
+		<footer class="d-flex justify-content-center col-sm-12 footer">
+			<nav aria-label="...">
+				<ul class="pagination" id="pagination"></ul>
+			</nav>
+		</footer>
+		<!-- Fin footer -->
+
+		<!-- ---------------------------------------------------------------------------- -->
+		<!-- Modal -->
+		<div
+			class="modal fade col-sm-12"
+			id="modalForm"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="modalForm"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="titleModal"></h5>
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body" id="modalBody"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <button type="button" class="btn btn-primary">Crear Usuario</button> -->
+		<!-- Registro de usuario -->
+
+		<!-- Scripts -->
+		<script>
+			/*
+			 * Variables Gobales
+			 */
+			var valueModal = "";
+			var headers = {
+				http_csrf_token: "466d019e8e7ccb02d2a01c841bfc2768",
+				"Content-Type": "application/json",
+			};
+			function typeModal(value) {
+				valueModal = value;
+			}
+		</script>
+		<script src="./js/bootstrap/jquery.js"></script>
+		<script src="./js/validate/jquery.validate.min.js"></script>
+		<script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+		<script src="./js/bootstrap/bootstrap.min.js"></script>
+		<script src="./js/auth.js"></script>
+		<script src="./js/rules-validate.js"></script>
+		<script src="./js/helpers.js"></script>
+		<script src="./js/local-storage.js"></script>
+		<script src="./js/pokemon.js"></script>
+		<script src="./js/pagination.js"></script>
+		<script src="./js/open-modal.js"></script>
+		<script src="./js/main.js"></script>
+		<!-- Fin scripts -->
+	</body>
 </html>

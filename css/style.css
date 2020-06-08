@@ -6,3 +6,16 @@
 .card{
 	margin-top: 2em;
 }
+.error{
+	color: rgb(200, 27, 27);
+}
+.footer{
+	margin: 4em 0 2em 0;
+	cursor: pointer;
+}
+#navBody{
+	width: 100%;
+}
+#navBody a {
+	cursor: pointer;
+}
