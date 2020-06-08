@@ -1,5 +1,5 @@
 # Test Accedo Pokemon Frontend
-Test de programación con ejercicio del frontend de accedo-pokemon que consume recursos del backend accedo-pokemon y de la PokeApi para generar listados ordenados de pokemones:
+Test de programación con ejercicio del frontend responsive de accedo-pokemon que consume recursos del backend accedo-pokemon y de la PokeApi para generar listados ordenados de pokemones:
 
 Ejecutar: 
 
