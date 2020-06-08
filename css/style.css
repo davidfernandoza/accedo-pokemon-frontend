@@ -1,6 +1,7 @@
-*{
+*, .bodyPokemon, .vertical{
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 .card{
@@ -16,6 +17,58 @@
 #navBody{
 	width: 100%;
 }
-#navBody a {
+#navBody a, .page-item {
 	cursor: pointer;
+}
+.vertical{
+	height: calc(100vh - 56px);
+	background-color: #f8f9fa!important;
+	-webkit-box-shadow: 10px 0px 11px -10px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 0px 11px -10px rgba(0,0,0,0.75);
+	box-shadow: 10px 0px 11px -10px rgba(0,0,0,0.75);
+}
+.navbar{
+	-webkit-box-shadow: 0px 10px 11px -12px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 10px 11px -12px rgba(0,0,0,0.75);
+	box-shadow: 0px 10px 11px -12px rgba(0,0,0,0.75);
+}
+
+.containerRow{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.imgPokemon{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+	height: 100%;
+}
+
+.paginateImg{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.paginateImg ul{
+	margin-left: 1em;
+	width: 100%;
+}
+
+
+@media (max-width:576px) {
+  .containerRow{
+    display: flex;
+		align-content: flex-start;
+		flex-direction: column-reverse;
+	}
+  .vertical{
+    height: 50vh;
+	}
+	
+	.paginateImg ul{
+		width: 50%;
+	}
 }

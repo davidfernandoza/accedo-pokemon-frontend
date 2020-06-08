@@ -18,7 +18,7 @@ async function register() {
 	} else {
 		saveLocal("user_data", response.payload);
 		alert("Usuario creado con exito");
-		contendNav();
+		start();
 	}
 }
 
@@ -37,14 +37,14 @@ async function login() {
 		alert(`${response.message}:\n● ${response.detail[0].message}`);
 	} else {
 		saveLocal("user_data", response.payload);
-		contendNav();
+		start();
 	}
 }
 
 // Elimina la data de auteticación
 async function logout() {
 	deleteLocal("user_data");
-	contendNav();
+	start();
 }
 
 // Valida si hay un usuario autenticado

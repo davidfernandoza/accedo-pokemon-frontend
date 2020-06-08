@@ -1,20 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="./css/style.css">
-	<title>Pokemon</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
+	<link rel="stylesheet" href="../css/style.css" />
+	<title>Accedo Pokemon</title>
 </head>
-<body>
-	<div id="container">
-	</div>	
 
-	<!-- Scripts -->
-	<script src="./js/bootstrap/jquery.js"></script>
-	<script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
-	<script src="./js/bootstrap/bootstrap.min.js.map"></script>
-	<script src="./js/main.js"></script>
+<body>
+	
+
+		<!-- Header -->
+		<header>
+			<!-- Nav -->
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand" href="../">Accedo Pokemon</a>
+				
+				<!-- Boton humburguesa para el collapse -->
+				<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+				>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav d-flex justify-content-end" id="navBody"></ul>
+			</div>
+		</nav>
+		<!-- Fin nav -->
+	</header>
+	<!-- Fin header -->
+	
+		<div class="row containerRow">
+			<div class="col-12 col-sm-3 vertical" id="infoPokemon">
+			</div>
+			<div class="col-12 col-sm-9" id="imgPokemon"></div>
+		</div>
+
+<!-- Scripts -->
+<script>
+	/*
+	* Variables Gobales
+	*/
+	var valueModal = "";
+	var init = 'info'
+	var headers = {
+		http_csrf_token: "466d019e8e7ccb02d2a01c841bfc2768",
+		"Content-Type": "application/json",
+	};
+	function typeModal(value) {
+		valueModal = value;
+	}
+</script>
+<script src="../js/bootstrap/jquery.js"></script>
+<script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../js/bootstrap/bootstrap.min.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/helpers.js"></script>
+<script src="../js/local-storage.js"></script>
+<script src="../js/pokemon.js"></script>
+<script src="../js/pagination.js"></script>
+<script src="../js/open-modal.js"></script>
+<script src="../js/main.js"></script>
+<!-- Fin scripts -->
 </body>
 </html>
